@@ -1,0 +1,48 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints/>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow addressText="" bufferWidth="-1" bufferHeight="-1" addressSpace="" />
+ </FrameBufferWindow>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path="Led_blinking" name="unnamed" />
+  <ProjectSessionItem path="Led_blinking;Led_blinking Configuration" name="unnamed" />
+  <ProjectSessionItem path="Led_blinking;Led_blinking Configuration;Source Files" name="unnamed" />
+  <ProjectSessionItem path="Led_blinking;Led_blinking Configuration;Source Files;Application/User" name="unnamed" />
+  <ProjectSessionItem path="Led_blinking;Led_blinking Configuration;Source Files;Drivers/STM32F2xx_HAL_Driver" name="unnamed" />
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <TargetWindow programAction="" uploadFileType="" programLoadAddress="" programSize="" uploadFileName="" uploadMemoryInterface="" programFileName="" uploadStartAddress="" programFileType="" uploadSize="" programMemoryInterface="" />
+ <TraceWindow>
+  <Trace enabled="Yes" />
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never" />
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never" />
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never" />
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never" />
+ </Watch4>
+ <Files>
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="F:/workspace_crossarm/ST_cube/Led_blinking/CrossworksARM/Src/main.c" y="77" path="F:/workspace_crossarm/ST_cube/Led_blinking/CrossworksARM/Src/main.c" left="0" selected="0" name="unnamed" top="57" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="F:/workspace_crossarm/ST_cube/Led_blinking/CrossworksARM/Src/gpio.c" y="54" path="F:/workspace_crossarm/ST_cube/Led_blinking/CrossworksARM/Src/gpio.c" left="0" selected="0" name="unnamed" top="46" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="F:/workspace_crossarm/ST_cube/Led_blinking/CrossworksARM/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_gpio.c" y="368" path="F:/workspace_crossarm/ST_cube/Led_blinking/CrossworksARM/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_gpio.c" left="0" selected="0" name="unnamed" top="349" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="F:/workspace_crossarm/ST_cube/Led_blinking/CrossworksARM/Src/tim.c" y="0" path="F:/workspace_crossarm/ST_cube/Led_blinking/CrossworksARM/Src/tim.c" left="0" selected="1" name="unnamed" top="22" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="F:/workspace_crossarm/ST_cube/Led_blinking/CrossworksARM/Inc/mxconstants.h" y="27" path="F:/workspace_crossarm/ST_cube/Led_blinking/CrossworksARM/Inc/mxconstants.h" left="0" selected="0" name="unnamed" top="26" />
+ </Files>
+ <ARMCrossStudioWindow activeProject="Led_blinking Configuration" autoConnectTarget="Olimex ARM-USB-TINY" debugSearchFileMap="" fileDialogInitialDirectory="F:/workspace_crossarm/ST_cube/ADC_LED/MDK-ARM" fileDialogDefaultFilter="*.c" autoConnectCapabilities="266111" debugSearchPath="" buildConfiguration="THUMB Debug" />
+</session>
