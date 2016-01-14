@@ -23,7 +23,7 @@
       arm_target_loader_applicable_loaders="Flash"
       arm_target_loader_default_loader="Flash"
       arm_target_restrict_memory_accesses="Yes"
-      c_preprocessor_definitions="USE_HAL_DRIVER;STM32F207xx"
+      c_preprocessor_definitions="USE_HAL_DRIVER;STM32F207xx;STARTUP_FROM_RESET"
       c_user_include_directories="$(PackagesDir)/CMSIS_4/CMSIS/Include;./../Inc;./../Drivers/STM32F2xx_HAL_Driver/Inc;./../Drivers/CMSIS/Include;./../Drivers/CMSIS/Device/ST/STM32F2xx/Include"
       debug_register_definition_file="$(TargetsDir)/STM32/STM32F20x_Peripherals.xml"
       linker_memory_map_file="$(TargetsDir)/STM32/STM32F207VC_MemoryMap.xml"
@@ -101,11 +101,11 @@
     Platform="ARM"
     arm_instruction_set="Thumb"
     arm_library_instruction_set="Thumb"
-    c_preprocessor_definitions="__THUMB"
+    c_preprocessor_definitions="__THUMB;STARTUP_FROM_RESET"
     hidden="Yes" />
   <configuration
     Name="Debug"
-    c_preprocessor_definitions="DEBUG"
+    c_preprocessor_definitions="DEBUG;STARTUP_FROM_RESET"
     gcc_debugging_level="Level 3"
     gcc_optimization_level="None"
     hidden="Yes" />
@@ -114,7 +114,7 @@
     inherited_configurations="THUMB;Release" />
   <configuration
     Name="Release"
-    c_preprocessor_definitions="NDEBUG"
+    c_preprocessor_definitions="NDEBUG;STARTUP_FROM_RESET"
     gcc_debugging_level="Level 1"
     gcc_optimization_level="Level 1"
     hidden="Yes" />

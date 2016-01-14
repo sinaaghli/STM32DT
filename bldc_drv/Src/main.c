@@ -47,10 +47,12 @@ void SystemClock_Config(void);
 #define EnGate_pin    GPIO_PIN_8
 #define DcCal_gpio    GPIOD
 #define DcCal_pin     GPIO_PIN_7
+#define Led_gpio      GPIOE
+#define Led_pin       GPIO_PIN_2
 
 #define Phase_gpio    GPIOB
 #define ph_u_h        GPIO_PIN_0
-#define ph_u_l        GPIO_PIN_4
+#define ph_u_l        GPIO_PIN_14
 #define ph_v_h        GPIO_PIN_1
 #define ph_v_l        GPIO_PIN_5
 #define ph_w_h        GPIO_PIN_7
@@ -60,7 +62,7 @@ void ApplyPhase(char sens) {
   switch(sens) {
     case 5:   
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,SET);
-      HAL_GPIO_WritePin(Phase_gpio,ph_u_l,RESET);
+      HAL_GPIO_WritePin(GPIOE,ph_u_l,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,RESET);
@@ -68,7 +70,7 @@ void ApplyPhase(char sens) {
       break;
     case 4:   
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,SET);
-      HAL_GPIO_WritePin(Phase_gpio,ph_u_l,RESET);
+      HAL_GPIO_WritePin(GPIOE,ph_u_l,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,RESET);
@@ -76,7 +78,7 @@ void ApplyPhase(char sens) {
       break;
     case 6:   
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,RESET);
-      HAL_GPIO_WritePin(Phase_gpio,ph_u_l,RESET);
+      HAL_GPIO_WritePin(GPIOE,ph_u_l,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,RESET);
@@ -84,7 +86,7 @@ void ApplyPhase(char sens) {
       break;
     case 2:   
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,RESET);
-      HAL_GPIO_WritePin(Phase_gpio,ph_u_l,SET);
+      HAL_GPIO_WritePin(GPIOE,ph_u_l,SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,RESET);
@@ -92,7 +94,7 @@ void ApplyPhase(char sens) {
       break;
     case 3:   
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,RESET);
-      HAL_GPIO_WritePin(Phase_gpio,ph_u_l,SET);
+      HAL_GPIO_WritePin(GPIOE,ph_u_l,SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,SET);
@@ -100,7 +102,7 @@ void ApplyPhase(char sens) {
       break;
     case 1: 
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,RESET);
-      HAL_GPIO_WritePin(Phase_gpio,ph_u_l,RESET);
+      HAL_GPIO_WritePin(GPIOE,ph_u_l,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,SET);
@@ -136,8 +138,12 @@ int main(void)
 //  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
 //  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
 //  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
+  HAL_GPIO_WritePin(Led_gpio,Led_pin,SET);
+  HAL_Delay(1000);
+  HAL_GPIO_WritePin(Led_gpio,Led_pin,RESET);
 
-  HAL_GPIO_WritePin(DcCal_gpio,DcCal_gpio,RESET);
+  HAL_GPIO_WritePin(DcCal_gpio,DcCal_pin,RESET);
+  HAL_GPIO_WritePin(EnGate_gpio,EnGate_pin,SET);
 
   char state;
   /* Infinite loop */
