@@ -7,16 +7,16 @@
   <FrameBufferWindow addressText="" bufferWidth="-1" bufferHeight="-1" addressSpace="" />
  </FrameBufferWindow>
  <Memory1>
-  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
  </Memory1>
  <Memory2>
-  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
  </Memory2>
  <Memory3>
-  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
  </Memory3>
  <Memory4>
-  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
  </Memory4>
  <Project>
   <ProjectSessionItem path="bldc_drive" name="unnamed" />
@@ -57,13 +57,10 @@
   <Watches active="0" update="Never" />
  </Watch4>
  <Files>
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="F:/workspace_crossarm/ST_cube/bldc_drv/Src/main.c" y="201" path="F:/workspace_crossarm/ST_cube/bldc_drv/Src/main.c" left="0" selected="1" name="unnamed" top="89" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="70" debugPath="F:/workspace_crossarm/ST_cube/bldc_drv/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_gpio.h" y="256" path="F:/workspace_crossarm/ST_cube/bldc_drv/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_gpio.h" left="0" selected="0" name="unnamed" top="0" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="F:/workspace_crossarm/ST_cube/bldc_drv/Src/tim.c" y="43" path="F:/workspace_crossarm/ST_cube/bldc_drv/Src/tim.c" left="0" selected="0" name="unnamed" top="130" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="F:/workspace_crossarm/ST_cube/bldc_drv/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c" y="3025" path="F:/workspace_crossarm/ST_cube/bldc_drv/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c" left="0" selected="0" name="unnamed" top="3008" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="F:/workspace_crossarm/ST_cube/bldc_drv/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_gpio.c" y="398" path="F:/workspace_crossarm/ST_cube/bldc_drv/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_gpio.c" left="0" selected="0" name="unnamed" top="392" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="28" debugPath="F:/workspace_crossarm/ST_cube/bldc_drv/Drivers/CMSIS/Device/ST/STM32F2xx/Include/stm32f207xx.h" y="1117" path="F:/workspace_crossarm/ST_cube/bldc_drv/Drivers/CMSIS/Device/ST/STM32F2xx/Include/stm32f207xx.h" left="0" selected="0" name="unnamed" top="1083" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="" x="0" debugPath="C:/Users/sohamstars/AppData/Local/Rowley Associates Limited/CrossWorks for ARM/v3/packages/targets/STM32/STM32_Startup.s" y="86" path="C:/Users/sohamstars/AppData/Local/Rowley Associates Limited/CrossWorks for ARM/v3/packages/targets/STM32/STM32_Startup.s" left="0" selected="0" name="unnamed" top="68" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="8" debugPath="../Src/main.c" y="156" path="../Src/main.c" left="0" selected="1" name="unnamed" top="135" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="21" debugPath="../Src/tim.c" y="70" path="../Src/tim.c" left="0" selected="0" name="unnamed" top="52" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../Inc/tim.h" y="46" path="../Inc/tim.h" left="0" selected="0" name="unnamed" top="27" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="18" debugPath="../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c" y="3025" path="../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c" left="0" selected="0" name="unnamed" top="3010" />
  </Files>
  <ARMCrossStudioWindow activeProject="bldc_drive" autoConnectTarget="Olimex ARM-USB-TINY" debugSearchFileMap="" fileDialogInitialDirectory="F:/workspace_crossarm/ST_cube/ADC_LED/MDK-ARM" fileDialogDefaultFilter="*.c" autoConnectCapabilities="266111" debugSearchPath="" buildConfiguration="THUMB Debug" />
 </session>

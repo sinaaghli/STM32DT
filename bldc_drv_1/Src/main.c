@@ -33,7 +33,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f2xx_hal.h"
-//#include "tim.h"
+#include "tim.h"
 #include "gpio.h"
 
 
@@ -57,60 +57,49 @@ void SystemClock_Config(void);
 #define ph_v_l        GPIO_PIN_5
 #define ph_w_h        GPIO_PIN_7
 #define ph_w_l        GPIO_PIN_6
+#define pulse3_3      TIM3->CCR3
+#define pulse3_4      TIM3->CCR4
+#define pulse4_2      TIM4->CCR2
+
 
 void GPIO_pwm(uint16_t GPIO_Pin, GPIO_PinState PinState)
 {
-  TIM_HandleTypeDef htim3;
-  TIM_HandleTypeDef htim4;
-  TIM_OC_InitTypeDef sConfigOC;
+
   if(PinState == GPIO_PIN_SET)
   {
   switch(GPIO_Pin) {
       case(ph_u_h):
-      sConfigOC.Pulse = 70;
-      HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_3);
-      HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+        pulse3_3 = 170;
       break;
 
       case(ph_v_h):
-      sConfigOC.Pulse = 70;
-      HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_4);
-      HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+        pulse3_4 = 170;
       break;
 
       case(ph_w_h):
-      sConfigOC.Pulse = 70;
-      HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_2);
-      HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
+        pulse4_2 = 170;
       break;
 
       default:
       break;
-}
-}
-  else {
+    }
+} else {
   switch(GPIO_Pin) {
       case(ph_u_h):
-      sConfigOC.Pulse = 5;
-      HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_3);
-      HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+        pulse3_3 = 0;
       break;
 
       case(ph_v_h):
-      sConfigOC.Pulse = 5;
-      HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_4);
-      HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+        pulse3_4 = 0;
       break;
 
       case(ph_w_h):
-      sConfigOC.Pulse = 5;
-      HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_2);
-      HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
+        pulse4_2 = 0;
       break;
 
       default:
       break;
- }
+    }
  }
  }
 
@@ -186,14 +175,15 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-//  MX_TIM3_Init();
-//  MX_TIM4_Init();
-//
-//  HAL_TIM_Base_Start(&htim3);
-//  HAL_TIM_Base_Start(&htim4);
-//  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
-//  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
-//  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
+  MX_TIM3_Init();
+  MX_TIM4_Init();
+
+  HAL_TIM_Base_Start(&htim3);
+  HAL_TIM_Base_Start(&htim4);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
+
   HAL_GPIO_WritePin(Led_gpio,Led_pin,GPIO_PIN_SET);
   HAL_Delay(1000);
   HAL_GPIO_WritePin(Led_gpio,Led_pin,GPIO_PIN_RESET);
@@ -202,8 +192,7 @@ int main(void)
   HAL_GPIO_WritePin(EnGate_gpio,EnGate_pin,GPIO_PIN_SET);
 
   char state;
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+
   while (1)
   {
     state = HAL_GPIO_ReadPin(sens_gpio,sens_ph1_pin);
@@ -213,7 +202,12 @@ int main(void)
     state |= HAL_GPIO_ReadPin(sens_gpio,sens_ph3_pin);
 
     ApplyPhase(state);
-
+//      if(TIM3->CCR3<200)
+//        TIM3->CCR3++;
+//      else
+//        TIM3->CCR3=0;
+//
+//      HAL_Delay(20);
   }
   /* USER CODE END 3 */
 

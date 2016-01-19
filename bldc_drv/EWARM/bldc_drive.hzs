@@ -1,0 +1,44 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints/>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow addressText="" bufferWidth="-1" bufferHeight="-1" addressSpace="" />
+ </FrameBufferWindow>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path="bldc_drive" name="unnamed" />
+  <ProjectSessionItem path="bldc_drive;bldc_drive" name="unnamed" />
+  <ProjectSessionItem path="bldc_drive;bldc_drive;Application" name="unnamed" />
+  <ProjectSessionItem path="bldc_drive;bldc_drive;Application;User" name="unnamed" />
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <TargetWindow programAction="" uploadFileType="" programLoadAddress="" programSize="" uploadFileName="" uploadMemoryInterface="" programFileName="" uploadStartAddress="" programFileType="" uploadSize="" programMemoryInterface="" />
+ <TraceWindow>
+  <Trace enabled="Yes" />
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never" />
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never" />
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never" />
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never" />
+ </Watch4>
+ <Files>
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../Src/main.c" y="79" path="../Src/main.c" left="0" selected="1" name="unnamed" top="163" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../Src/gpio.c" y="64" path="../Src/gpio.c" left="0" selected="0" name="unnamed" top="54" />
+ </Files>
+ <ARMCrossStudioWindow activeProject="bldc_drive" autoConnectTarget="Olimex ARM-USB-TINY" debugSearchFileMap="" fileDialogInitialDirectory="" fileDialogDefaultFilter="*.c" autoConnectCapabilities="266111" debugSearchPath="" buildConfiguration="THUMB Debug" />
+</session>
