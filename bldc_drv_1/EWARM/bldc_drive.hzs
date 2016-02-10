@@ -57,10 +57,12 @@
   <Watches active="0" update="Never" />
  </Watch4>
  <Files>
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="8" debugPath="../Src/main.c" y="156" path="../Src/main.c" left="0" selected="1" name="unnamed" top="135" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="21" debugPath="../Src/tim.c" y="70" path="../Src/tim.c" left="0" selected="0" name="unnamed" top="52" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="24" debugPath="../Src/main.c" y="65" path="../Src/main.c" left="0" selected="1" name="unnamed" top="60" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../Src/tim.c" y="70" path="../Src/tim.c" left="0" selected="0" name="unnamed" top="43" />
   <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../Inc/tim.h" y="46" path="../Inc/tim.h" left="0" selected="0" name="unnamed" top="27" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="18" debugPath="../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c" y="3025" path="../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c" left="0" selected="0" name="unnamed" top="3010" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c" y="3025" path="../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c" left="0" selected="0" name="unnamed" top="3010" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../Src/gpio.c" y="65" path="../Src/gpio.c" left="0" selected="0" name="unnamed" top="54" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c" y="281" path="../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c" left="0" selected="0" name="unnamed" top="266" />
  </Files>
  <ARMCrossStudioWindow activeProject="bldc_drive" autoConnectTarget="Olimex ARM-USB-TINY" debugSearchFileMap="" fileDialogInitialDirectory="F:/workspace_crossarm/ST_cube/ADC_LED/MDK-ARM" fileDialogDefaultFilter="*.c" autoConnectCapabilities="266111" debugSearchPath="" buildConfiguration="THUMB Debug" />
 </session>

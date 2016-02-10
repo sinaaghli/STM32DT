@@ -23,4 +23,4 @@ bldc_drive\ THUMB\ Debug/main.o: \
  ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pwr_ex.h \
  ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_tim.h \
  ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_tim_ex.h ../Inc/tim.h \
- ../Inc/gpio.h
+ /Applications/CrossWorks\ for\ ARM\ 3.6/include/math.h ../Inc/gpio.h
