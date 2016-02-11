@@ -36,7 +36,6 @@
 #include "tim.h"
 #include "math.h"
 #include "gpio.h"
-int wait=  0;
 
 void SystemClock_Config(void);
 
@@ -62,11 +61,11 @@ void SystemClock_Config(void);
 #define pulse1_4      TIM1->CCR4
 #define pulse4_1      TIM4->CCR1
 #define pulse3_2      TIM3->CCR2
-/*void wait(void) {
+void wait(void) {
   int ii;
-  for(ii = 0; ii < 1000; ii++){};
+//  for(ii = 0; ii < 1; ii++){};
 }
-*/
+
 void GPIO_pwm(uint16_t GPIO_Pin, GPIO_PinState PinState)
 {
 
@@ -114,7 +113,7 @@ void ApplyPhaseSolid(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,GPIO_PIN_SET);
       break;
@@ -123,7 +122,7 @@ void ApplyPhaseSolid(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_SET);
       break;
@@ -132,7 +131,7 @@ void ApplyPhaseSolid(char sens) {
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_SET);
       break;
@@ -141,7 +140,7 @@ void ApplyPhaseSolid(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_SET);
       break;
@@ -150,7 +149,7 @@ void ApplyPhaseSolid(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_SET);
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_SET);
       break;
@@ -159,7 +158,7 @@ void ApplyPhaseSolid(char sens) {
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_SET);
       break;
@@ -175,7 +174,7 @@ void ApplyPhaseSolid_rev(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_SET);
       
@@ -185,7 +184,7 @@ void ApplyPhaseSolid_rev(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_SET);
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_SET);
       
@@ -195,7 +194,7 @@ void ApplyPhaseSolid_rev(char sens) {
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_SET);
       
@@ -205,7 +204,7 @@ void ApplyPhaseSolid_rev(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_SET);
       
@@ -215,7 +214,7 @@ void ApplyPhaseSolid_rev(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,GPIO_PIN_SET);
       break;
@@ -224,7 +223,7 @@ void ApplyPhaseSolid_rev(char sens) {
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_SET);
       break;
@@ -239,7 +238,7 @@ void ApplyPhaseSolid_rev2(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_SET);
       
@@ -249,7 +248,7 @@ void ApplyPhaseSolid_rev2(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_SET);
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_SET);
       
@@ -259,7 +258,7 @@ void ApplyPhaseSolid_rev2(char sens) {
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_SET);
       
@@ -269,7 +268,7 @@ void ApplyPhaseSolid_rev2(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_SET);
       
@@ -279,7 +278,7 @@ void ApplyPhaseSolid_rev2(char sens) {
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_u_h,GPIO_PIN_SET);
       break;
@@ -288,7 +287,7 @@ void ApplyPhaseSolid_rev2(char sens) {
       HAL_GPIO_WritePin(GPIOE,ph_u_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_v_l,GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_h,GPIO_PIN_RESET);
-      HAL_Delay(wait);
+      wait();
       HAL_GPIO_WritePin(Phase_gpio,ph_v_h,GPIO_PIN_SET);
       HAL_GPIO_WritePin(Phase_gpio,ph_w_l,GPIO_PIN_SET);
       break;
@@ -396,7 +395,7 @@ int main(void)
     state = state << 1;
     state |= HAL_GPIO_ReadPin(sens_gpio,sens_ph3_pin);
 
-    ApplyPhaseSolid_rev2(state);
+    ApplyPhaseSolid_rev(state);
     
     if(HAL_GetTick()>1000+cnt) {
       HAL_GPIO_TogglePin(EnGate_gpio,EnGate_pin);
