@@ -2,28 +2,28 @@
 <session>
  <Bookmarks/>
  <Breakpoints>
-  <BreakpointListItem line="174" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="4" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
-  <BreakpointListItem line="184" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="4" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
-  <BreakpointListItem line="194" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="4" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
-  <BreakpointListItem line="204" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="4" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
-  <BreakpointListItem line="214" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="4" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
-  <BreakpointListItem line="223" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="4" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
+  <BreakpointListItem line="174" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="2" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
+  <BreakpointListItem line="184" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="2" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
+  <BreakpointListItem line="194" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="2" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
+  <BreakpointListItem line="204" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="2" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
+  <BreakpointListItem line="214" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="2" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
+  <BreakpointListItem line="223" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="2" counter="0" isFunctionBreakpoint="false" filename="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" expression="" />
  </Breakpoints>
  <ExecutionProfileWindow/>
  <FrameBufferWindow>
   <FrameBufferWindow addressText="" bufferWidth="-1" bufferHeight="-1" addressSpace="" />
  </FrameBufferWindow>
  <Memory1>
-  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
  </Memory1>
  <Memory2>
-  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
  </Memory2>
  <Memory3>
-  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
  </Memory3>
  <Memory4>
-  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="bldc_drive" addressSpace="" />
  </Memory4>
  <Project>
   <ProjectSessionItem path="bldc_drive" name="unnamed" />
@@ -32,6 +32,7 @@
   <ProjectSessionItem path="bldc_drive;bldc_drive;Application;User" name="unnamed" />
   <ProjectSessionItem path="bldc_drive;bldc_drive;Drivers" name="unnamed" />
   <ProjectSessionItem path="bldc_drive;bldc_drive;Drivers;STM32F2xx_HAL_Driver" name="unnamed" />
+  <ProjectSessionItem path="bldc_drive;bldc_drive;Source Files" name="unnamed" />
   <ProjectSessionItem path="bldc_drive;bldc_drive;System Files" name="unnamed" />
  </Project>
  <Register1>
@@ -65,8 +66,9 @@
   <Watches active="0" update="Never" />
  </Watch4>
  <Files>
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="17" debugPath="../Src/main.c" y="37" path="../Src/main.c" left="0" selected="1" name="unnamed" top="29" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../Src/simple.c" y="1" path="../Src/simple.c" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="12" debugPath="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" y="38" path="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Src/main.c" left="0" selected="1" name="unnamed" top="32" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="" x="0" debugPath="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_gpio.c" y="399" path="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_gpio.c" left="0" selected="0" name="unnamed" top="381" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="" x="0" debugPath="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c" y="286" path="F:/workspace_crossarm/extra_workspace/bldc_drv_1/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c" left="0" selected="0" name="unnamed" top="284" />
  </Files>
- <ARMCrossStudioWindow activeProject="bldc_drive" autoConnectTarget="Olimex ARM-USB-TINY" debugSearchFileMap="" fileDialogInitialDirectory="/Users/saghli/code/STM32DT/bldc_drv_2/Src" fileDialogDefaultFilter="*.c" autoConnectCapabilities="266111" debugSearchPath="" buildConfiguration="THUMB Debug" />
+ <ARMCrossStudioWindow activeProject="bldc_drive" autoConnectTarget="Olimex ARM-USB-TINY" debugSearchFileMap="" fileDialogInitialDirectory="F:/workspace_crossarm/ST_cube/ADC_LED/MDK-ARM" fileDialogDefaultFilter="*.c" autoConnectCapabilities="266111" debugSearchPath="" buildConfiguration="THUMB Debug" />
 </session>

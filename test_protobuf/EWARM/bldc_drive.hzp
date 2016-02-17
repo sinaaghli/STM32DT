@@ -10,11 +10,11 @@
       arm_core_type="Cortex-M3"
       arm_fpu_type="None"
       arm_gcc_target="arm-unknown-eabi"
-      arm_linker_heap_size="128"
+      arm_linker_heap_size="2048"
       arm_linker_jtag_pad_pre_dr="1"
       arm_linker_jtag_pad_pre_ir="5"
       arm_linker_process_stack_size="0"
-      arm_linker_stack_size="256"
+      arm_linker_stack_size="2048"
       arm_simulator_memory_simulation_filename="$(TargetsDir)/STM32/STM32SimulatorMemory.dll"
       arm_simulator_memory_simulation_parameter="STM32F207VC;0x40000;0x20000"
       arm_target_connect_with_reset="Yes"
@@ -24,7 +24,7 @@
       arm_target_loader_default_loader="Flash"
       arm_target_restrict_memory_accesses="Yes"
       c_preprocessor_definitions="STARTUP_FROM_RESET;USE_HAL_DRIVER;STM32F207xx"
-      c_user_include_directories="$(TargetsDir)/CMSIS_3/CMSIS/Include;./../Inc;./../Drivers/STM32F2xx_HAL_Driver/Inc;./../Drivers/CMSIS/Include;./../Drivers/CMSIS/Device/ST/STM32F2xx/Include;~/code/nanopb/"
+      c_user_include_directories="$(TargetsDir)/CMSIS_3/CMSIS/Include;./../Inc;./../Drivers/STM32F2xx_HAL_Driver/Inc;./../Drivers/CMSIS/Include;./../Drivers/CMSIS/Device/ST/STM32F2xx/Include;./../../../nanopb"
       debug_register_definition_file="$(TargetsDir)/STM32/STM32F20x_Peripherals.xml"
       linker_memory_map_file="$(TargetsDir)/STM32/STM32F207VC_MemoryMap.xml"
       linker_section_placement_file="$(StudioDir)/targets/Cortex_M/flash_placement.xml"
@@ -78,7 +78,10 @@
         <file file_name="./../Src/stm32f2xx_hal_msp.c" />
         <file file_name="./../Src/main.c" />
         <file file_name="./../Src/gpio.c" />
-        <file file_name="./../Src/tim.c" />
+        <file file_name="../Src/simple.pb.c" />
+        <file file_name="../Src/pb_decode.c" />
+        <file file_name="../Src/pb_encode.c" />
+        <file file_name="../Src/pb_common.c" />
       </folder>
     </folder>
     <configuration
@@ -122,4 +125,45 @@
   <configuration
     Name="Common"
     c_preprocessor_definitions="STARTUP_FROM_RESET" />
+  <configuration Name="ARM Debug" inherited_configurations="ARM;Debug" />
+  <configuration
+    Name="ARM"
+    Platform="ARM"
+    arm_instruction_set="ARM"
+    arm_library_instruction_set="ARM"
+    c_preprocessor_definitions="__ARM"
+    hidden="Yes" />
+  <configuration Name="ARM Release" inherited_configurations="ARM;Release" />
+  <configuration
+    Name="ARM Flash Debug"
+    inherited_configurations="ARM;Flash;Debug" />
+  <configuration
+    Name="Flash"
+    c_preprocessor_definitions="__FLASH_BUILD"
+    hidden="Yes" />
+  <configuration
+    Name="ARM Flash Release"
+    inherited_configurations="ARM;Flash;Release" />
+  <configuration
+    Name="THUMB Flash Debug"
+    inherited_configurations="THUMB;Flash;Debug" />
+  <configuration
+    Name="THUMB Flash Release"
+    inherited_configurations="THUMB;Flash;Release" />
+  <configuration
+    Name="ARM RAM Debug"
+    inherited_configurations="ARM;RAM;Debug" />
+  <configuration
+    Name="RAM"
+    c_preprocessor_definitions="__RAM_BUILD"
+    hidden="Yes" />
+  <configuration
+    Name="ARM RAM Release"
+    inherited_configurations="ARM;RAM;Release" />
+  <configuration
+    Name="THUMB RAM Debug"
+    inherited_configurations="THUMB;RAM;Debug" />
+  <configuration
+    Name="THUMB RAM Release"
+    inherited_configurations="THUMB;RAM;Release" />
 </solution>
